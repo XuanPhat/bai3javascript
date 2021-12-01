@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExcerciseB3</title>
+  </head>
+  <body>
+    <script>
+      // bai 1
+      function repeatString(str, num) {
+        if (num < 0) {
+          return 'error';
+        } else {
+          return str.repeat(num);
+        }
+      }
+
+      // bai 2
+      function reverseString(str) {
+        var splitStr = str.split('');
+        var reverseStr = splitStr.reverse();
+        var result = reverseStr.join('');
+        return result;
+      }
+
+      // bai 3
+      function leapYear(year) {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+      }
+
+      // bai 4
+      function sumAll(start, end) {
+        let sum = 0;
+        for (let i = start; i <= end; i++) {
+          sum += i;
+        }
+        return sum;
+      }
+      // bai 5
+      function FtoC(Fahrenheit) {
+        return [Fahrenheit, ((Fahrenheit - 32) * 5) / 9];
+      }
+
+      // bai 6
+      function palindrome(str) {
+        var re = /[\W_]/g;
+        var lowRegStr = str.toLowerCase().replace(re, '');
+        var reverseStr = lowRegStr.split('').reverse().join('');
+        return reverseStr === lowRegStr;
+      }
+
+      // bai 7
+      function decode(message) {
+        let result = '';
+        message = message.toLowerCase();
+        for (let i = 0; i < message.length; i++) {
+          let index = newalpha.indexOf(message[i]);
+          result += alphabet[index];
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>
